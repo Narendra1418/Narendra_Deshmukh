@@ -12,7 +12,7 @@
 ## 🚀 About Me
 
 🎓 Final-Year **B.Tech Computer Science Engineering** Student  
-💻 Passionate **Full Stack Developer** With Hands-On Experience In **Java, MERN, Next.js, And DevOps**  
+💻 Passionate **Full Stack Developer** With Hands-On Experience In **Java, MERN, Next.js And DevOps Enthusiast**  
 📦 Strong Interest In **Scalable Systems, Backend Architecture, And Real-World Problem Solving**  
 🎯 Actively Preparing For **Software Engineering Roles**
 
