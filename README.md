@@ -17,6 +17,14 @@
 🎯 Actively Preparing For **Software Engineering Roles**
 
 ---
+---
+
+## 🌐 Portfolio
+
+🌐 **Live Portfolio:** https://your-portfolio.vercel.app  
+📦 **Source Code:** https://github.com/Narendra1418/react-portfolio
+
+---
 
 ## 🎓 Education
 
