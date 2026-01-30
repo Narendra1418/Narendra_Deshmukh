@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Github, Globe, Coffee, Server, Database, Cloud, Code2, Zap, Package, Activity, GitBranch, FileCode, Boxes } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Github, Globe, Coffee, Server, Database, Cloud, Code2, Zap, Package, Activity, GitBranch, FileCode, Boxes, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Projects = ({ isDark }) => {
   const [selectedCategory, setSelectedCategory] = useState('webDev');
+  const scrollContainerRefs = useRef({});
 
   // Define tech icons using Lucide icons instead of react-icons
   const techIcons = {
@@ -137,6 +138,20 @@ const Projects = ({ isDark }) => {
     ]
   };
 
+  const scrollLeft = (category) => {
+    const container = scrollContainerRefs.current[category];
+    if (container) {
+      container.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = (category) => {
+    const container = scrollContainerRefs.current[category];
+    if (container) {
+      container.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="projects" className="py-20">
       <div className="max-w-full mx-auto px-8 sm:px-12 lg:px-16">
@@ -183,9 +198,37 @@ const Projects = ({ isDark }) => {
         
         {Object.entries(projects).map(([category, projectList]) => (
           <div key={category} className={`mb-16 ${selectedCategory !== category ? 'hidden' : ''}`}>
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden px-16">
+              {/* Navigation Arrows - Outside Cards */}
+              <button
+                onClick={() => scrollLeft(category)}
+                className={`absolute -left-2 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full ${
+                  isDark ? 'bg-gray-800/90 hover:bg-gray-700/90' : 'bg-white/90 hover:bg-gray-100/90'
+                } backdrop-blur-sm shadow-lg transition-all hover:scale-110 border ${
+                  isDark ? 'border-gray-700' : 'border-gray-200'
+                }`}
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className={`w-6 h-6 ${isDark ? 'text-white' : 'text-gray-800'}`} />
+              </button>
+              
+              <button
+                onClick={() => scrollRight(category)}
+                className={`absolute -right-2 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full ${
+                  isDark ? 'bg-gray-800/90 hover:bg-gray-700/90' : 'bg-white/90 hover:bg-gray-100/90'
+                } backdrop-blur-sm shadow-lg transition-all hover:scale-110 border ${
+                  isDark ? 'border-gray-700' : 'border-gray-200'
+                }`}
+                aria-label="Scroll right"
+              >
+                <ChevronRight className={`w-6 h-6 ${isDark ? 'text-white' : 'text-gray-800'}`} />
+              </button>
+
               {/* Current: Manual horizontal scroll */}
-              <div className="flex space-x-8 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+              <div 
+                ref={(el) => scrollContainerRefs.current[category] = el}
+                className="flex space-x-8 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
+              >
                 {projectList.map((project, idx) => {
                   return (
                     <div 
@@ -205,6 +248,7 @@ const Projects = ({ isDark }) => {
                         <div className="flex flex-wrap gap-2 mb-3">
                           {project.tech.map((techName, techIdx) => {
                             const TechIcon = techIcons[techName];
+                            if (!TechIcon) return null;
                             return (
                               <div key={techIdx} className={`p-2 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-200/50'}`}>
                                 <TechIcon className="w-6 h-6 text-fuchsia-500" />
