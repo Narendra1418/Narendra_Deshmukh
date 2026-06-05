@@ -86,7 +86,7 @@ const Hero = ({ isDark, scrollToSection, onDownloadCV }) => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
-                  <span className="text-sm text-white font-bold">Basic Cloud Concepts (AWS)</span>
+                  <span className="text-sm text-white font-bold">Basic Cloud Concepts (AWS,GCP)</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
@@ -103,7 +103,7 @@ const Hero = ({ isDark, scrollToSection, onDownloadCV }) => {
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-indigo-500" />
-                <span className="text-white font-bold">Mumbai, India</span>
+                <span className="text-white font-bold">Pune, India</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4 text-green-500" />

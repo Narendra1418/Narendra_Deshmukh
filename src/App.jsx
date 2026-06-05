@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Academic from './components/Academic';
 import CoverLetterModal from './components/CoverLetterModal';
 import Footer from './components/Footer';
 
@@ -16,7 +17,7 @@ const App = () => {
   // Scroll spy for active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'projects', 'skills', 'academic', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -59,7 +60,9 @@ const App = () => {
       <Projects isDark={isDark} />
       
       <Skills isDark={isDark} />
-      
+
+      <Academic isDark={isDark} />
+
       <Contact isDark={isDark} />
       
       <Footer isDark={isDark} />

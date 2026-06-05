@@ -13,7 +13,7 @@ const Navbar = ({ isDark, setIsDark, activeSection, scrollToSection }) => {
           </div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            {['Home', 'Projects', 'Skills', 'Contact'].map(item => (
+            {['Home', 'Projects', 'Skills', 'Academic', 'Contact'].map(item => (
               <button 
                 key={item} 
                 onClick={() => scrollToSection(item.toLowerCase())} 
@@ -57,7 +57,7 @@ const Navbar = ({ isDark, setIsDark, activeSection, scrollToSection }) => {
 
       {isMenuOpen && (
         <div className={`md:hidden ${isDark ? 'bg-gray-800' : 'bg-white'} border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-          {['Home', 'Projects', 'Skills', 'Contact'].map(item => (
+          {['Home', 'Projects', 'Skills', 'Academic', 'Contact'].map(item => (
             <button 
               key={item} 
               onClick={() => {
