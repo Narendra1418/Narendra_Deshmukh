@@ -27,115 +27,96 @@ const Projects = ({ isDark }) => {
   const projects = {
     webDev: [
       { 
-        name: 'E-Commerce Platform', 
-        desc: 'Full-stack shopping platform with payment integration, user authentication, product catalog, shopping cart, order management, and real-time inventory tracking. Built with modern web technologies ensuring responsive design and seamless user experience.', 
-        img: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['React', 'Node', 'MongoDB', 'Tailwind']
-      },
-      { 
-        name: 'Social Media Dashboard', 
+        name: 'Smart Trade Hub', 
         desc: 'Real-time analytics dashboard with interactive charts and data visualizations. Features include user engagement metrics, post analytics, audience demographics, and performance tracking with customizable date ranges and export capabilities.', 
         img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop', 
         github: 'https://github.com',
-        tech: ['React', 'Express', 'PostgreSQL', 'Tailwind']
+        tech: ['Next', 'Node','Express', 'PostgreSQL', 'Tailwind']
       },
       { 
-        name: 'Portfolio Generator', 
+        name: 'Sanchari', 
         desc: 'AI-powered portfolio website builder that automatically generates stunning portfolio sites based on user input. Features customizable templates, drag-and-drop interface, SEO optimization, and one-click deployment to various hosting platforms.', 
         img: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['React', 'Node', 'MongoDB', 'Tailwind']
       },
       { 
-        name: 'Task Management App', 
+        name: 'Chat Application', 
+        desc: 'Real-time messaging platform built with Spring Boot featuring instant messaging, group chats, file sharing, message history, read receipts, online status indicators, and end-to-end encryption for secure communications.', 
+        img: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=300&fit=crop', 
+        github: 'https://github.com',
+        tech: ['React', 'Node','Express', 'MongoDB']
+      },
+      { 
+        name: 'AI Resume Analyzer', 
         desc: 'Collaborative project management tool with real-time updates, task assignment, progress tracking, team collaboration features, file attachments, comments, and notifications. Supports agile workflows with kanban boards and sprint planning.', 
         img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['React', 'Node', 'MongoDB', 'Tailwind']
       },
-      { 
-        name: 'Weather Dashboard', 
-        desc: 'Interactive weather forecast application providing real-time weather updates, 7-day forecasts, severe weather alerts, and historical data. Features beautiful visualizations, location-based services, and customizable weather widgets.', 
-        img: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['React', 'Express', 'Tailwind']
-      }
+      
     ],
     java: [
       { 
-        name: 'Banking System', 
+        name: 'E-Commerce Platform', 
+        desc: 'Full-stack shopping platform with payment integration, user authentication, product catalog, shopping cart, order management, and real-time inventory tracking. Built with modern web technologies ensuring responsive design and seamless user experience.', 
+        img: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop', 
+        github: 'https://github.com',
+        tech: ['React', 'Spring boot ', 'SQL', 'Tailwind']
+      },
+      { 
+        name: 'ReelBites ', 
         desc: 'Secure banking application with comprehensive transaction management, account management, fund transfers, loan processing, and detailed financial reporting. Implements industry-standard security protocols with encryption and multi-factor authentication.', 
         img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['Java', 'Spring', 'MySQL']
       },
-      { 
-        name: 'Library Management', 
-        desc: 'Complete library inventory system with book cataloging, member management, borrowing/returning tracking, fine calculation, reservation system, and detailed reports. Features barcode scanning and automated overdue notifications.', 
-        img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Java', 'Spring', 'MySQL']
-      },
-      { 
-        name: 'Chat Application', 
-        desc: 'Real-time messaging platform built with Spring Boot featuring instant messaging, group chats, file sharing, message history, read receipts, online status indicators, and end-to-end encryption for secure communications.', 
-        img: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Java', 'Spring', 'MongoDB']
-      },
-      { 
-        name: 'Inventory Manager', 
-        desc: 'Enterprise inventory tracking system with stock management, automated reordering, supplier management, warehouse tracking, barcode integration, and comprehensive reporting. Supports multiple locations and real-time synchronization.', 
-        img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Java', 'Spring', 'PostgreSQL']
-      },
-      { 
-        name: 'RESTful API Service', 
-        desc: 'Scalable microservices architecture implementing RESTful APIs with service discovery, load balancing, circuit breakers, and API gateway. Features comprehensive API documentation, versioning, and rate limiting for production-grade applications.', 
-        img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Java', 'Spring', 'Docker']
-      }
+
+      // { 
+      //   name: 'RESTful API Service', 
+      //   desc: 'Scalable microservices architecture implementing RESTful APIs with service discovery, load balancing, circuit breakers, and API gateway. Features comprehensive API documentation, versioning, and rate limiting for production-grade applications.', 
+      //   img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop', 
+      //   github: 'https://github.com',
+      //   tech: ['Java', 'Spring', 'Docker']
+      // }
     ],
-    devOps: [
-      { 
-        name: 'CI/CD Pipeline', 
-        desc: 'Automated deployment pipeline with Jenkins and Docker featuring automated testing, code quality checks, security scanning, containerized builds, and multi-environment deployments. Includes rollback mechanisms and deployment approvals.', 
-        img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Jenkins', 'Docker', 'Kubernetes']
-      },
-      { 
-        name: 'Kubernetes Cluster', 
-        desc: 'Orchestrated containerized applications with Kubernetes featuring auto-scaling, load balancing, service mesh, persistent storage, secrets management, and monitoring. Implements high availability and disaster recovery strategies.', 
-        img: 'https://images.unsplash.com/photo-1667372335937-d03be6fb0b88?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Kubernetes', 'Docker', 'Prometheus']
-      },
-      { 
-        name: 'Monitoring Dashboard', 
-        desc: 'Infrastructure monitoring solution with Prometheus and Grafana providing real-time metrics, custom alerts, performance dashboards, resource utilization tracking, and incident management. Features historical data analysis and anomaly detection.', 
-        img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Prometheus', 'Docker', 'Kubernetes']
-      },
-      { 
-        name: 'Terraform IaC', 
-        desc: 'Infrastructure as Code for AWS implementing automated provisioning, version-controlled infrastructure, multi-environment setups, cost optimization, and compliance policies. Includes modules for common patterns and disaster recovery configurations.', 
-        img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Terraform', 'Docker']
-      },
-      { 
-        name: 'Log Aggregation', 
-        desc: 'ELK stack implementation for centralized logging featuring log collection from multiple sources, real-time search, pattern detection, log analysis, and customizable dashboards. Includes alerting and log retention policies.', 
-        img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
-        tech: ['Elasticsearch', 'Docker', 'Kubernetes']
-      }
-    ]
+    // devOps: [
+    //   { 
+    //     name: 'CI/CD Pipeline', 
+    //     desc: 'Automated deployment pipeline with Jenkins and Docker featuring automated testing, code quality checks, security scanning, containerized builds, and multi-environment deployments. Includes rollback mechanisms and deployment approvals.', 
+    //     img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop', 
+    //     github: 'https://github.com',
+    //     tech: ['Jenkins', 'Docker', 'Kubernetes']
+    //   },
+    //   { 
+    //     name: 'Kubernetes Cluster', 
+    //     desc: 'Orchestrated containerized applications with Kubernetes featuring auto-scaling, load balancing, service mesh, persistent storage, secrets management, and monitoring. Implements high availability and disaster recovery strategies.', 
+    //     img: 'https://images.unsplash.com/photo-1667372335937-d03be6fb0b88?w=400&h=300&fit=crop', 
+    //     github: 'https://github.com',
+    //     tech: ['Kubernetes', 'Docker', 'Prometheus']
+    //   },
+    //   { 
+    //     name: 'Monitoring Dashboard', 
+    //     desc: 'Infrastructure monitoring solution with Prometheus and Grafana providing real-time metrics, custom alerts, performance dashboards, resource utilization tracking, and incident management. Features historical data analysis and anomaly detection.', 
+    //     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop', 
+    //     github: 'https://github.com',
+    //     tech: ['Prometheus', 'Docker', 'Kubernetes']
+    //   },
+    //   { 
+    //     name: 'Terraform IaC', 
+    //     desc: 'Infrastructure as Code for AWS implementing automated provisioning, version-controlled infrastructure, multi-environment setups, cost optimization, and compliance policies. Includes modules for common patterns and disaster recovery configurations.', 
+    //     img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop', 
+    //     github: 'https://github.com',
+    //     tech: ['Terraform', 'Docker']
+    //   },
+    //   { 
+    //     name: 'Log Aggregation', 
+    //     desc: 'ELK stack implementation for centralized logging featuring log collection from multiple sources, real-time search, pattern detection, log analysis, and customizable dashboards. Includes alerting and log retention policies.', 
+    //     img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop', 
+    //     github: 'https://github.com',
+    //     tech: ['Elasticsearch', 'Docker', 'Kubernetes']
+    //   }
+    // ]
   };
 
   const scrollLeft = (category) => {
