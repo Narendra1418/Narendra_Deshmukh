@@ -38,7 +38,7 @@ const Projects = ({ isDark }) => {
         desc: 'AI-powered portfolio website builder that automatically generates stunning portfolio sites based on user input. Features customizable templates, drag-and-drop interface, SEO optimization, and one-click deployment to various hosting platforms.', 
         img: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop', 
         github: 'https://github.com',
-        tech: ['React', 'Node', 'MongoDB', 'Tailwind']
+        tech: ['React', 'Node','Express', 'MongoDB', 'Tailwind']
       },
       { 
         name: 'Chat Application', 
@@ -52,7 +52,7 @@ const Projects = ({ isDark }) => {
         desc: 'Collaborative project management tool with real-time updates, task assignment, progress tracking, team collaboration features, file attachments, comments, and notifications. Supports agile workflows with kanban boards and sprint planning.', 
         img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop', 
         github: 'https://github.com',
-        tech: ['React', 'Node', 'MongoDB', 'Tailwind']
+        tech: ['React', 'Tailwind','Puter.js']
       },
       
     ],
@@ -69,7 +69,7 @@ const Projects = ({ isDark }) => {
         desc: 'Secure banking application with comprehensive transaction management, account management, fund transfers, loan processing, and detailed financial reporting. Implements industry-standard security protocols with encryption and multi-factor authentication.', 
         img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=400&h=300&fit=crop', 
         github: 'https://github.com',
-        tech: ['Java', 'Spring', 'MySQL']
+        tech: ['React', 'Java', 'Spring boot', 'PostgreSQL', 'Docker']
       },
 
       // { 
