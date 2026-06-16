@@ -22,7 +22,7 @@
 ## 🌐 Portfolio
 
 🌐 **Live Portfolio:** https://your-portfolio.vercel.app  
-📦 **Source Code:** https://github.com/Narendra1418/react-portfolio
+📦 **Source Code:** https://github.com/Narendra1418/Narendra_Deshmukh
 
 ---
 
