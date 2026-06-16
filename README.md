@@ -55,6 +55,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
 ### ☁️ DevOps & Tools
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
@@ -65,39 +66,6 @@
 ---
 
 ## 📂 Featured Projects
-
-### 🛡️ Online Proctoring & AI-Based Recruitment System  
-**Tech Stack:** Java, Spring Boot, MySQL, REST APIs, JWT, NLP
-
-🔹 Built An **End-To-End Recruitment Automation Platform** That Simulates Real-World Hiring Workflows Including:
-- Aptitude Tests  
-- Coding Assessments  
-- Resume Screening  
-- AI-Driven Interview Evaluation  
-
-🔹 Implemented **Secure Online Proctoring Mechanisms**:
-- Webcam Monitoring  
-- Tab-Switch & Activity Detection  
-- Automated Test Submission  
-- Detailed Audit Logging To Prevent Malpractice  
-
-🔹 Designed An **AI-Based Evaluation Pipeline**:
-- Resume Parsing Using NLP  
-- Skill-Based Interview Question Generation  
-- Candidate Response Evaluation Using Similarity Scoring Algorithms  
-
-🔹 Developed **Role-Based Access Control (RBAC)**:
-- Admin, Company, Candidate Roles  
-- Secure Authentication Using **JWT**
-
-🔹 Enabled **Subscription-Based Company Onboarding**:
-- Bulk Candidate Management  
-- Real-Time Test Progress Tracking  
-- Automated Shortlisting With Performance Analytics  
-
-🔹 Designed Scalable **RESTful APIs** Using Clean Architecture Principles And Optimized Database Queries To Support Concurrent Users.
-
----
 
 ### 📈 SmartTradeHub – Trading & Investment Platform  
 **Tech Stack:** Next.js, Tailwind CSS, Recharts, Zustand, Node.js/Express (TypeScript), PostgreSQL, Redis, Docker, GitHub Actions, FastAPI, TensorFlow/PyTorch, AWS/GCP
@@ -156,6 +124,40 @@
 📌 SmartTradeHub demonstrates strong expertise in full-stack development, system design, financial domain modeling, real-time systems, AI/ML integration, and DevOps practices.
 
 ---
+
+### 🛡️ Online Proctoring & AI-Based Recruitment System  
+**Tech Stack:** Java, Spring Boot, MySQL, REST APIs, JWT, NLP
+
+🔹 Built An **End-To-End Recruitment Automation Platform** That Simulates Real-World Hiring Workflows Including:
+- Aptitude Tests  
+- Coding Assessments  
+- Resume Screening  
+- AI-Driven Interview Evaluation  
+
+🔹 Implemented **Secure Online Proctoring Mechanisms**:
+- Webcam Monitoring  
+- Tab-Switch & Activity Detection  
+- Automated Test Submission  
+- Detailed Audit Logging To Prevent Malpractice  
+
+🔹 Designed An **AI-Based Evaluation Pipeline**:
+- Resume Parsing Using NLP  
+- Skill-Based Interview Question Generation  
+- Candidate Response Evaluation Using Similarity Scoring Algorithms  
+
+🔹 Developed **Role-Based Access Control (RBAC)**:
+- Admin, Company, Candidate Roles  
+- Secure Authentication Using **JWT**
+
+🔹 Enabled **Subscription-Based Company Onboarding**:
+- Bulk Candidate Management  
+- Real-Time Test Progress Tracking  
+- Automated Shortlisting With Performance Analytics  
+
+🔹 Designed Scalable **RESTful APIs** Using Clean Architecture Principles And Optimized Database Queries To Support Concurrent Users.
+
+---
+
 
 ### 🌐 MERN Stack Project 1 – Full Stack Web Application  
 **Tech Stack:** MongoDB, Express, React, Node.js
