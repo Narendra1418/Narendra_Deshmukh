@@ -30,7 +30,7 @@
 
 **Bachelor Of Technology (B.Tech) – Computer Science Engineering**  
 📍 India  
-📊 CGPA: **6.0 / 10**
+📊 CGPA: **6.87 / 10**
 
 ---
 
