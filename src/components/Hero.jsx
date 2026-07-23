@@ -74,7 +74,7 @@ const Hero = ({ isDark, scrollToSection, onDownloadCV }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
-                  <span className="text-sm text-white font-bold">Full Stack Development (MERN)</span>
+                  <span className="text-sm text-white font-bold">Full Stack Development</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
@@ -142,5 +142,6 @@ const Hero = ({ isDark, scrollToSection, onDownloadCV }) => {
     </section>
   );
 };
+
 
 export default Hero;

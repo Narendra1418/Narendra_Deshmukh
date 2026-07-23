@@ -42,12 +42,12 @@ const CoverLetterModal = ({ isDark, onClose }) => {
             <div className="flex justify-center items-center space-x-4 text-sm">
               <span className="flex items-center space-x-1">
                 <Mail className="w-4 h-4" />
-                <span>narendra@example.com</span>
+                <span>dnarendra4510@gmail.com</span>
               </span>
               <span>|</span>
               <span className="flex items-center space-x-1">
                 <Phone className="w-4 h-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 8975394198</span>
               </span>
             </div>
           </div>
