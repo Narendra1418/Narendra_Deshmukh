@@ -7,7 +7,8 @@ const Skills = ({ isDark }) => {
     backend: Server,
     database: Database,
     tools: Wrench,
-    DevOps: Container
+    DevOps: Container,
+    data: Database
   };
 
   const categoryLabels = {
@@ -15,7 +16,8 @@ const Skills = ({ isDark }) => {
     backend: 'Backend',
     database: 'Database',
     tools: 'Tools & Other',
-    DevOps: 'DevOps'
+    DevOps: 'DevOps',
+    data: 'Data & Analytics'
   };
 
   const skills = {
@@ -39,6 +41,14 @@ const Skills = ({ isDark }) => {
       { name: 'Redis', percent: 70 }
 
     ],
+    data: [
+      { name: 'Python', percent: 85 },
+      { name: 'Pandas', percent: 82 },
+      { name: 'NumPy', percent: 80 },
+      { name: 'Tableau / Power BI', percent: 70 },
+      { name: 'Data Cleaning', percent: 85 },
+      { name: 'Data Visualization', percent: 78 }
+    ],
     tools: [
       { name: 'Github', percent: 85 },
       { name: 'Postman ', percent: 80 },
@@ -59,7 +69,7 @@ const Skills = ({ isDark }) => {
       <div className="max-w-full mx-auto px-8 sm:px-12 lg:px-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-linear-to-r from-pink-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Skills</h2>
         
-        <div className="grid grid-cols-5 gap-6">
+        <div className="grid grid-cols-6 gap-6">
           {Object.entries(skills).map(([category, skillList]) => {
             const IconComponent = categoryIcons[category];
             return (

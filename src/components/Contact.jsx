@@ -11,6 +11,7 @@ const Contact = ({ isDark }) => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,34 +21,56 @@ const Contact = ({ isDark }) => {
   };
 
   const sendEmail = async () => {
+    // Use backend endpoint (Express + Nodemailer) when available. Falls back to EmailJS if backend not configured.
+    setLoading(true);
     try {
-      setLoading(true);
+      const backendUrl = import.meta.env.VITE_MAIL_SERVER_URL || 'http://localhost:4000/api/send-email';
 
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          time: new Date().toLocaleString(),
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      const resp = await fetch(backendUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: formData.name, email: formData.email, message: formData.message })
+      });
+
+      if (!resp.ok) {
+        // fallback to EmailJS if backend fails
+        console.warn('Backend email failed, falling back to EmailJS');
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            time: new Date().toLocaleString(),
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+      } else {
+        const data = await resp.json();
+        console.log('Mail sent', data);
+      }
 
       alert('Message sent successfully!');
 
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error("EMAILJS ERROR:", error);
-      alert(error.text || error.message);
-} finally {
+      console.error('Send email error:', error);
+      alert('Failed to send message. Please try again later.');
+    } finally {
       setLoading(false);
+    }
+  };
+
+  const copyLinkedIn = async (e) => {
+    e.stopPropagation();
+    const link = 'https://www.linkedin.com/in/narendra-deshmukh4510';
+    try {
+      await navigator.clipboard.writeText(link);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 2000);
+    } catch (err) {
+      console.error('Copy failed', err);
     }
   };
   return (
@@ -81,16 +104,33 @@ const Contact = ({ isDark }) => {
               <h3 className="text-2xl font-bold mb-6">Social Links</h3>
               
               <div className="flex space-x-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors">
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); window.open('https://github.com/Narendra1418', '_blank'); }}
+                  className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors"
+                  aria-label="GitHub profile"
+                >
                   <Github className="w-6 h-6" />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors">
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a href="mailto:your.email@example.com" className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors">
+                </button>
+                <div className="flex items-center space-x-2">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open('https://www.linkedin.com/in/narendra-deshmukh4510', '_blank'); }}
+                    className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors"
+                    aria-label="LinkedIn profile"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </button>
+                </div>
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open('https://twitter.com', '_blank'); }}
+                    className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors"
+                    aria-label="Twitter profile"
+                  >
+                    <Twitter className="w-6 h-6" />
+                  </button>
+                <a href="mailto:dnarendra4510@gmail.com" className="p-3 bg-indigo-500 rounded-lg hover:bg-indigo-600 transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
               </div>

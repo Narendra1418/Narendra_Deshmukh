@@ -21,7 +21,13 @@ const Projects = ({ isDark }) => {
     Jenkins: GitBranch,
     Prometheus: Activity,
     Terraform: FileCode,
-    Elasticsearch: Database
+    Elasticsearch: Database,
+    Python: Code2,
+    Pandas: Database,
+    NumPy: Database,
+    'Scikit-learn': Code2,
+    Tableau: FileCode,
+    PowerBI: FileCode
   };
 
   const projects = {
@@ -56,6 +62,32 @@ const Projects = ({ isDark }) => {
       },
       
     ],
+    devOps: [
+      {
+        name: 'CI/CD Pipeline',
+        desc: 'Planned: Automated deployment pipeline with CI/CD, automated tests, and multi-environment deployments.',
+        img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop',
+        github: '#',
+        tech: ['Jenkins', 'Docker', 'Kubernetes'],
+        status: 'Planned'
+      },
+      {
+        name: 'Kubernetes Cluster',
+        desc: 'Planned: Orchestrated containerized applications with auto-scaling, service mesh, and monitoring.',
+        img: 'https://images.unsplash.com/photo-1667372335937-d03be6fb0b88?w=400&h=300&fit=crop',
+        github: '#',
+        tech: ['Kubernetes', 'Docker', 'Prometheus'],
+        status: 'Planned'
+      },
+      {
+        name: 'Monitoring Dashboard',
+        desc: 'Planned: Infrastructure monitoring with Prometheus and Grafana for metrics, alerts, and dashboards.',
+        img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
+        github: '#',
+        tech: ['Prometheus', 'Grafana', 'Docker'],
+        status: 'Planned'
+      }
+    ],
     java: [
       { 
         name: 'E-Commerce Platform', 
@@ -79,6 +111,29 @@ const Projects = ({ isDark }) => {
       //   github: 'https://github.com',
       //   tech: ['Java', 'Spring', 'Docker']
       // }
+    ],
+    data: [
+      {
+        name: 'Sales Analytics Dashboard',
+        desc: 'Interactive dashboard analyzing sales trends, cohort analysis, and revenue forecasting using cleaned datasets, time-series aggregation and visualizations with drill-downs.',
+        img: 'https://images.unsplash.com/photo-1508385082359-f4f7c3d0c4b6?w=400&h=300&fit=crop',
+        github: 'https://github.com',
+        tech: ['Python', 'Pandas', 'NumPy', 'Tableau']
+      },
+      {
+        name: 'Customer Segmentation',
+        desc: 'Clustering-based segmentation pipeline to identify customer cohorts, visualize segments, and recommend targeted marketing strategies using scikit-learn.',
+        img: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=400&h=300&fit=crop',
+        github: 'https://github.com',
+        tech: ['Python', 'Pandas', 'Scikit-learn', 'PowerBI']
+      },
+      {
+        name: 'ETL & Reporting Pipeline',
+        desc: 'End-to-end ETL pipeline that extracts raw data, applies transformations and quality checks, loads into analytical store, and produces scheduled reports.',
+        img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
+        github: 'https://github.com',
+        tech: ['Python', 'NumPy', 'Pandas', 'SQL']
+      }
     ],
     // devOps: [
     //   { 
@@ -152,6 +207,7 @@ const Projects = ({ isDark }) => {
             <span>Web Development</span>
           </button>
           
+          
           <button
             onClick={() => setSelectedCategory('java')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -175,7 +231,21 @@ const Projects = ({ isDark }) => {
             <Server className="w-5 h-5" />
             <span>DevOps</span>
           </button>
+          
+          <button
+            onClick={() => setSelectedCategory('data')}
+            className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
+              selectedCategory === 'data'
+                ? 'bg-linear-to-r from-pink-500 via-fuchsia-500 to-purple-600 shadow-lg shadow-fuchsia-500/50'
+                : isDark ? 'bg-gray-800/40 hover:bg-gray-800/60 border border-gray-700' : 'bg-white/40 hover:bg-white/60 border border-gray-200'
+            }`}
+          >
+            <Activity className="w-5 h-5" />
+            <span>Data Analytics</span>
+          </button>
+          
         </div>
+        
         
         {Object.entries(projects).map(([category, projectList]) => (
           <div key={category} className={`mb-16 ${selectedCategory !== category ? 'hidden' : ''}`}>
@@ -214,8 +284,14 @@ const Projects = ({ isDark }) => {
                   return (
                     <div 
                       key={idx} 
-                      className={`shrink-0 w-96 rounded-2xl overflow-hidden ${isDark ? 'bg-gray-800/40' : 'bg-white/40'} backdrop-blur-lg border ${isDark ? 'border-gray-700' : 'border-gray-200'} shadow-xl flex flex-col snap-center`}
+                      className={`shrink-0 w-96 rounded-2xl overflow-hidden relative ${isDark ? 'bg-gray-800/40' : 'bg-white/40'} backdrop-blur-lg border ${isDark ? 'border-gray-700' : 'border-gray-200'} shadow-xl flex flex-col snap-center`}
                     >
+                      {/* Status badge */}
+                      {project.status && (
+                        <div className="absolute right-3 top-3 px-2 py-1 rounded-full text-xs font-semibold bg-yellow-400 text-gray-900 z-20">
+                          {project.status}
+                        </div>
+                      )}
                       <img src={project.img} alt={project.name} className="w-full h-52 object-cover" />
                       <div className="p-5 flex flex-col grow">
                         <h4 className="text-xl font-bold mb-2">{project.name}</h4>

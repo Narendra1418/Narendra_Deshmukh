@@ -196,4 +196,26 @@
 
 ---
 
+## 📨 Local Mail Server (Nodemailer)
+
+A small Express + Nodemailer server is included at `server/index.js` to forward contact form messages to your email. Steps:
+
+1. Copy `server/.env.example` to `server/.env` and set your SMTP credentials and `RECEIVER_EMAIL`.
+2. Install server dependencies:
+
+```bash
+npm install express nodemailer dotenv cors
+```
+
+3. Start the server:
+
+```bash
+npm run server
+```
+
+4. By default the frontend `Contact` component will POST to `http://localhost:4000/api/send-email`. You can change the URL with the `VITE_MAIL_SERVER_URL` env var in your Vite setup.
+
+The server is minimal and intended for local development. For production, secure credentials and consider using transactional email services (SendGrid, Mailgun, AWS SES).
+
+
 ⭐ *If You Like My Work, Consider Giving A Star To My Repositories!*
