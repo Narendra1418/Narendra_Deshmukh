@@ -21,7 +21,7 @@
 
 ## 🌐 Portfolio
 
-🌐 **Live Portfolio:** https://narendra-deshmukh.vercel.app  
+🌐 **Live Portfolio:** https://narendradeshmukhdev.vercel.app  
 📦 **Source Code:** https://github.com/Narendra1418/Narendra_Deshmukh
 
 ---
