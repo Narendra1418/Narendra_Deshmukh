@@ -41,7 +41,7 @@ const Projects = ({ isDark }) => {
       },
       { 
         name: 'Sanchari', 
-        desc: 'AI-powered portfolio website builder that automatically generates stunning portfolio sites based on user input. Features customizable templates, drag-and-drop interface, SEO optimization, and one-click deployment to various hosting platforms.', 
+        desc: 'Sanchari is a Full-Stack travel and booking platform for exploring Indian cities, destinations, hotels, and personalized itineraries, built with Next.js, Node.js, PostgreSQL, Redis, Docker, and AWS..', 
         img: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['React', 'Node','Express', 'MongoDB', 'Tailwind']
@@ -51,11 +51,12 @@ const Projects = ({ isDark }) => {
         desc: 'Real-time messaging platform built with Spring Boot featuring instant messaging, group chats, file sharing, message history, read receipts, online status indicators, and end-to-end encryption for secure communications.', 
         img: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=300&fit=crop', 
         github: 'https://github.com',
-        tech: ['React', 'Node','Express', 'MongoDB']
+        tech: ['React', 'Node','Express', 'MongoDB'],
+        status: 'Planned'
       },
       { 
         name: 'AI Resume Analyzer', 
-        desc: 'Collaborative project management tool with real-time updates, task assignment, progress tracking, team collaboration features, file attachments, comments, and notifications. Supports agile workflows with kanban boards and sprint planning.', 
+        desc: 'AI-powered resume analysis tool that provides insights and recommendations for improving job applications. Features include keyword analysis, ATS compatibility scoring, and personalized feedback based on industry standards.', 
         img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['React', 'Tailwind','Puter.js']
@@ -109,32 +110,36 @@ const Projects = ({ isDark }) => {
       //   desc: 'Scalable microservices architecture implementing RESTful APIs with service discovery, load balancing, circuit breakers, and API gateway. Features comprehensive API documentation, versioning, and rate limiting for production-grade applications.', 
       //   img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop', 
       //   github: 'https://github.com',
-      //   tech: ['Java', 'Spring', 'Docker']
+      //   tech: ['Java', 'Spring', 'Docker'],
+      //   status: 'Planned'
       // }
     ],
-    data: [
-      {
-        name: 'Sales Analytics Dashboard',
-        desc: 'Interactive dashboard analyzing sales trends, cohort analysis, and revenue forecasting using cleaned datasets, time-series aggregation and visualizations with drill-downs.',
-        img: 'https://images.unsplash.com/photo-1508385082359-f4f7c3d0c4b6?w=400&h=300&fit=crop',
-        github: 'https://github.com',
-        tech: ['Python', 'Pandas', 'NumPy', 'Tableau']
-      },
-      {
-        name: 'Customer Segmentation',
-        desc: 'Clustering-based segmentation pipeline to identify customer cohorts, visualize segments, and recommend targeted marketing strategies using scikit-learn.',
-        img: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=400&h=300&fit=crop',
-        github: 'https://github.com',
-        tech: ['Python', 'Pandas', 'Scikit-learn', 'PowerBI']
-      },
-      {
-        name: 'ETL & Reporting Pipeline',
-        desc: 'End-to-end ETL pipeline that extracts raw data, applies transformations and quality checks, loads into analytical store, and produces scheduled reports.',
-        img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
-        github: 'https://github.com',
-        tech: ['Python', 'NumPy', 'Pandas', 'SQL']
-      }
-    ],
+    // data: [
+    //   {
+    //     name: 'Sales Analytics Dashboard',
+    //     desc: 'Interactive dashboard analyzing sales trends, cohort performance, and revenue forecasting with drill-down visualizations.',
+    //     img: 'https://images.unsplash.com/photo-1508385082359-f4f7c3d0c4b6?w=400&h=300&fit=crop',
+    //     github: '#',
+    //     tech: ['Python', 'Pandas', 'NumPy', 'Tableau'],
+    //     status: 'Planned'
+    //   },
+    //   {
+    //     name: 'Customer Segmentation',
+    //     desc: 'Clustering pipeline to identify customer cohorts, visualize segments, and recommend targeted marketing strategies.',
+    //     img: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=400&h=300&fit=crop',
+    //     github: '#',
+    //     tech: ['Python', 'Pandas', 'Scikit-learn', 'PowerBI'],
+    //     status: 'Planned'
+    //   },
+    //   {
+    //     name: 'ETL & Reporting Pipeline',
+    //     desc: 'End-to-end ETL pipeline with data quality checks, analytical storage, and scheduled business reports.',
+    //     img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
+    //     github: '#',
+    //     tech: ['Python', 'NumPy', 'Pandas'],
+    //     status: 'Planned'
+    //   }
+    // ],
     // devOps: [
     //   { 
     //     name: 'CI/CD Pipeline', 
@@ -190,7 +195,7 @@ const Projects = ({ isDark }) => {
 
   return (
     <section id="projects" className="py-20">
-      <div className="max-w-full mx-auto px-8 sm:px-12 lg:px-16">
+      <div className="max-w-full mx-auto px-4 sm:px-12 lg:px-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-linear-to-r from-pink-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Projects</h2>
         
         {/* Category Buttons */}
@@ -232,7 +237,7 @@ const Projects = ({ isDark }) => {
             <span>DevOps</span>
           </button>
           
-          <button
+          {/* <button
             onClick={() => setSelectedCategory('data')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
               selectedCategory === 'data'
@@ -242,14 +247,14 @@ const Projects = ({ isDark }) => {
           >
             <Activity className="w-5 h-5" />
             <span>Data Analytics</span>
-          </button>
+          </button> */}
           
         </div>
         
         
         {Object.entries(projects).map(([category, projectList]) => (
           <div key={category} className={`mb-16 ${selectedCategory !== category ? 'hidden' : ''}`}>
-            <div className="relative overflow-hidden px-16">
+            <div className="relative overflow-hidden px-10 sm:px-16">
               {/* Navigation Arrows - Outside Cards */}
               <button
                 onClick={() => scrollLeft(category)}

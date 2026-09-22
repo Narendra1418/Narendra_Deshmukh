@@ -46,7 +46,7 @@ const Hero = ({ isDark, scrollToSection, onDownloadCV }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                 Hi, I'm <span className="bg-linear-to-r from-pink-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Narendra</span>
               </h1>
               <div className="text-xl md:text-2xl text-white font-bold mt-3 h-8">
