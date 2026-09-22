@@ -11,7 +11,7 @@
 
 ## 🚀 About Me
 
-🎓 Final-Year **B.Tech Computer Science Engineering** Student  
+🎓 **B.Tech Computer Science Engineering** Graduate  
 💻 Passionate **Full Stack Developer** With Hands-On Experience In **Java, MERN, Next.js And DevOps Enthusiast**  
 📦 Strong Interest In **Scalable Systems, Backend Architecture, And Real-World Problem Solving**  
 🎯 Actively Preparing For **Software Engineering Roles**
@@ -21,7 +21,7 @@
 
 ## 🌐 Portfolio
 
-🌐 **Live Portfolio:** https://your-portfolio.vercel.app  
+🌐 **Live Portfolio:** https://narendradeshmukhdev.vercel.app  
 📦 **Source Code:** https://github.com/Narendra1418/Narendra_Deshmukh
 
 ---
