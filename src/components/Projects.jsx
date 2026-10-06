@@ -254,14 +254,14 @@ const Projects = ({ isDark }) => {
         
         {Object.entries(projects).map(([category, projectList]) => (
           <div key={category} className={`mb-16 ${selectedCategory !== category ? 'hidden' : ''}`}>
-            <div className="relative overflow-hidden px-10 sm:px-16">
+            <div className="relative overflow-hidden px-10 sm:px-10">
               {/* Navigation Arrows - Outside Cards */}
               <button
                 onClick={() => scrollLeft(category)}
                 className={`absolute -left-2 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full ${
-                  isDark ? 'bg-gray-800/90 hover:bg-gray-700/90' : 'bg-white/90 hover:bg-gray-100/90'
-                } backdrop-blur-sm shadow-lg transition-all hover:scale-110 border ${
-                  isDark ? 'border-gray-700' : 'border-gray-200'
+                  isDark ? 'bg-gray-800/60 hover:bg-gray-700/75' : 'bg-white/60 hover:bg-gray-100/75'
+                } backdrop-blur-sm shadow-md transition-all hover:scale-110 border ${
+                  isDark ? 'border-gray-700/70' : 'border-gray-200/70'
                 }`}
                 aria-label="Scroll left"
               >
@@ -271,9 +271,9 @@ const Projects = ({ isDark }) => {
               <button
                 onClick={() => scrollRight(category)}
                 className={`absolute -right-2 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full ${
-                  isDark ? 'bg-gray-800/90 hover:bg-gray-700/90' : 'bg-white/90 hover:bg-gray-100/90'
-                } backdrop-blur-sm shadow-lg transition-all hover:scale-110 border ${
-                  isDark ? 'border-gray-700' : 'border-gray-200'
+                  isDark ? 'bg-gray-800/60 hover:bg-gray-700/75' : 'bg-white/60 hover:bg-gray-100/75'
+                } backdrop-blur-sm shadow-md transition-all hover:scale-110 border ${
+                  isDark ? 'border-gray-700/70' : 'border-gray-200/70'
                 }`}
                 aria-label="Scroll right"
               >

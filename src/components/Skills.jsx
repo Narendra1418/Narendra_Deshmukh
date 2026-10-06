@@ -66,10 +66,10 @@ const Skills = ({ isDark }) => {
 
   return (
     <section id="skills" className="py-20">
-      <div className="max-w-full mx-auto px-8 sm:px-12 lg:px-16">
+      <div className="max-w-full mx-auto px-8 sm:px-8 lg:px-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-linear-to-r from-pink-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Skills</h2>
         
-        <div className="overflow-x-auto pb-4 md:overflow-visible md:pb-0">
+        <div className="skills-scrollbar overflow-x-auto pb-4 md:overflow-visible md:pb-0">
           <div className="grid min-w-[1200px] grid-cols-5 gap-4 md:min-w-0">
           {Object.entries(skills).map(([category, skillList]) => {
             const IconComponent = categoryIcons[category];
