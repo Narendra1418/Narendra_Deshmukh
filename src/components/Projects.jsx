@@ -36,7 +36,7 @@ const Projects = ({ isDark }) => {
         name: 'Smart Trade Hub', 
         desc: 'Real-time analytics dashboard with interactive charts and data visualizations. Features include user engagement metrics, post analytics, audience demographics, and performance tracking with customizable date ranges and export capabilities.', 
         img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
+        github: 'https://github.com/Narendra1418/Smart-Trade-Hub',
         tech: ['Next', 'Node','Express', 'PostgreSQL', 'Tailwind']
       },
       { 
@@ -58,7 +58,7 @@ const Projects = ({ isDark }) => {
         name: 'AI Resume Analyzer', 
         desc: 'AI-powered resume analysis tool that provides insights and recommendations for improving job applications. Features include keyword analysis, ATS compatibility scoring, and personalized feedback based on industry standards.', 
         img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop', 
-        github: 'https://github.com',
+        github: 'https://github.com/Narendra1418/AI-Resume-Analyzer',
         tech: ['React', 'Tailwind','Puter.js']
       },
       
@@ -99,7 +99,7 @@ const Projects = ({ isDark }) => {
       },
       { 
         name: 'ReelBites ', 
-        desc: 'Secure banking application with comprehensive transaction management, account management, fund transfers, loan processing, and detailed financial reporting. Implements industry-standard security protocols with encryption and multi-factor authentication.', 
+        desc: 'Full-stack food discovery platform featuring restaurant listings, ratings, reviews, and Instagram-style food reels. Designed with React.js, Spring Boot microservices, and a Node.js-based reel service, with PostgreSQL, Redis, and cloud video storage planned for scalable performance.', 
         img: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=400&h=300&fit=crop', 
         github: 'https://github.com',
         tech: ['React', 'Java', 'Spring boot', 'PostgreSQL', 'Docker']
